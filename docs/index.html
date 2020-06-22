@@ -187,19 +187,15 @@ var player = document.getElementById("evade")
 
 /*Open Fullscreen*/
 
-function fullscreen(){
-  var fullscreen = 1
-  if (player.requestFullscreen){
-    player.requestFullscreen();
-  }
-  else if (player.mozRequestFullScreen){
-    player.MozrequestFullScreen();
-  }
-  else if (player.webkitRequestFullscreen){
-    player.webkitRequestFullScreen();
-  }
-  else if (player.msRequestFullscreen){
-    player.msRequestFullscreen
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
   }
 }
 </script>
